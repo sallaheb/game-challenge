@@ -1,0 +1,51 @@
+
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+
+
+}
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px black solid;
+  height: 300px;
+  width: 279px;
+
+  &__region {
+    border: 1px black solid;
+    width: 29px;
+    height: 28px;
+  }
+  &__region--01 {
+    background-color: red;
+  }
+
+}
+.apple {
+  background-image: url('./images/apple.png');
+  background-size: contain;
+}
+
+.basket {
+  background-image: url('./images/picnic-basket.png');
+  background-size: contain;
+
+}
+
+footer {
+  display: flex;
+  font-size: 5px;
+  div {
+  margin:40px
+  }
+}
