@@ -1,12 +1,8 @@
-// add bem notation of bullet in the class and use this to put into other classes 9 down
-// use the box display color to move
-// make total total a random a number
 
 let total = 0;
 
-const moveSquarePosition0 = () => {
-
-
+const moveApple = () => {
+  stopFunction();
   if (total >= 9) {
     document
       .querySelector(`.game__region--${total - 9}`)
@@ -21,29 +17,20 @@ const moveSquarePosition0 = () => {
     isAppleandBasket();
   }
   total += 9;
-
-
+ 
 };
 
+const appleDrop = setInterval(moveApple, 100)
+const gameStartTime = new Date().getTime()
 
-
-const appleDrop = () => {
-  setInterval(moveSquarePosition0, 400);
-  
+const stopFunction = () => {
+  if(new Date().getTime() - gameStartTime > 30000) {
+    clearInterval(appleDrop);
+  } 
 }
 
-clearInterval(appleDrop, 500)
-appleDrop();
 
-
-
-
-// stopGame
-
-// setInterval(stopGame,100)
-
-// basket to move in the horizontal direction
-// 37 left arrow 39 right arrow
+// basket to move in the horizontal direction//
 
 let endtotal = 81;
 let basketPosition = document
@@ -76,13 +63,9 @@ if (endtotal < 89) {
 
 };
 
-
 document.addEventListener("keydown", move);
 
-// scoring of game or counter//
 
-// apples classlist apears in endregion 
-// endregion has how many classlist
 
 let score = 0;
 const isAppleandBasket = () => {
