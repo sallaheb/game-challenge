@@ -1,8 +1,8 @@
-//////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 const game = {
   total: 0,
-  startTime: gameStartTime = new Date().getTime()
-}
+  duration: (gameStartTime = new Date().getTime()),
+};
 
 const moveApple = () => {
   stopFunction();
@@ -20,43 +20,37 @@ const moveApple = () => {
     isAppleandBasket();
   }
   game.total += 9;
- 
 };
 
-
-
-const appleDrop = setInterval(moveApple, 80)
-
+const appleDrop = setInterval(moveApple, 80);
 
 const stopFunction = () => {
-  if(new Date().getTime() - game.startTime > 30000) {
+  if (new Date().getTime() - game.duration > 30000) {
     clearInterval(appleDrop);
-  } 
-}
+  }
+};
 
-
-//////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
 
 const keyboardMove = {
   endtotal: 81,
   basketPosition: document
-  .querySelector('.game__region--81')
-  .classList.add("basket"),
-}
-
+    .querySelector(".game__region--81")
+    .classList.add("basket"),
+};
 
 const move = (e) => {
-if (keyboardMove.endtotal < 89) { 
-  if (e.keyCode == 39) {
-    keyboardMove.endtotal += 1;
-    document
-      .querySelector(`.game__region--${keyboardMove.endtotal}`)
-      .classList.add("basket");
-    document
-      .querySelector(`.game__region--${keyboardMove.endtotal - 1}`)
-      .classList.remove("basket");
-
-  }};
+  if (keyboardMove.endtotal < 89) {
+    if (e.keyCode == 39) {
+      keyboardMove.endtotal += 1;
+      document
+        .querySelector(`.game__region--${keyboardMove.endtotal}`)
+        .classList.add("basket");
+      document
+        .querySelector(`.game__region--${keyboardMove.endtotal - 1}`)
+        .classList.remove("basket");
+    }
+  }
   if (keyboardMove.endtotal > 81) {
     if (e.keyCode == 37) {
       keyboardMove.endtotal--;
@@ -66,9 +60,8 @@ if (keyboardMove.endtotal < 89) {
       document
         .querySelector(`.game__region--${keyboardMove.endtotal + 1}`)
         .classList.remove("basket");
-      
-  }};
-
+    }
+  }
 };
 
 document.addEventListener("keydown", move);
@@ -76,15 +69,15 @@ document.addEventListener("keydown", move);
 /////////////////////////////////////////////////////////////////////////////
 
 const gameScore = {
-  score:0, 
-  displayScore: document.querySelector(".game__region--8")
-} 
+  score: 0,
+  displayScore: document.querySelector(".game__region--8"),
+};
 
 const isAppleandBasket = () => {
   let position = document.querySelector(".basket");
   if (position.classList.length >= 5) {
     gameScore.score += 1;
-  } 
- gameScore.displayScore.innerHTML = `Score: ${gameScore.score}`;
-}
+  }
+  gameScore.displayScore.innerHTML = `Score: ${gameScore.score}`;
+};
 ///////////////////////////////////////////////////////////////////////////////////
