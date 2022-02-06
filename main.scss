@@ -1,9 +1,8 @@
-
-
 * {
 margin: 0;
 padding: 0;
 }
+
 
 body {
   display: flex;
@@ -14,20 +13,23 @@ body {
 
 
 }
+
+.instructions {
+  font-size: 11px;
+
+}
+
 .game {
   display: flex;
   flex-wrap: wrap;
   border: 1px black solid;
   height: 300px;
-  width: 279px;
+  width: 262px;
+  background-color: grey;
 
   &__region {
-    border: 1px black solid;
     width: 29px;
     height: 28px;
-  }
-  &__region--01 {
-    background-color: red;
   }
 
 }

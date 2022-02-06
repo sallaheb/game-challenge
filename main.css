@@ -11,20 +11,21 @@ body {
   align-items: center;
 }
 
+.instructions {
+  font-size: 11px;
+}
+
 .game {
   display: flex;
   flex-wrap: wrap;
   border: 1px black solid;
   height: 300px;
-  width: 279px;
+  width: 262px;
+  background-color: grey;
 }
 .game__region {
-  border: 1px black solid;
   width: 29px;
   height: 28px;
-}
-.game__region--01 {
-  background-color: red;
 }
 
 .apple {

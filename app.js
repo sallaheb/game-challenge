@@ -1,4 +1,4 @@
-
+//////////////////////////////////////////////////////////////////////////
 let total = 0;
 
 const moveApple = () => {
@@ -20,7 +20,7 @@ const moveApple = () => {
  
 };
 
-const appleDrop = setInterval(moveApple, 100)
+const appleDrop = setInterval(moveApple, 80)
 const gameStartTime = new Date().getTime()
 
 const stopFunction = () => {
@@ -30,7 +30,7 @@ const stopFunction = () => {
 }
 
 
-// basket to move in the horizontal direction//
+//////////////////////////////////////////////////////////////////////////
 
 let endtotal = 81;
 let basketPosition = document
@@ -65,7 +65,7 @@ if (endtotal < 89) {
 
 document.addEventListener("keydown", move);
 
-
+/////////////////////////////////////////////////////////////////////////////
 
 let score = 0;
 const isAppleandBasket = () => {
@@ -73,6 +73,9 @@ const isAppleandBasket = () => {
   if (position.classList.length >= 5) {
     score += 1;
   } 
-  console.log(score);
+ displayScore.innerHTML = `Score: ${score}`;
 }
 
+let displayScore = document.querySelector(".game__region--8");
+
+///////////////////////////////////////////////////////////////////////////////////
