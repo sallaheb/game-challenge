@@ -22,7 +22,7 @@
     color:$score-font-color;
     font-weight: $score-font-weight;
     text-align: center;
-    background-color: red;
+    background-color:$score-background-color;
   }
   &__region--30 {
     font-size: $score-font-size;
