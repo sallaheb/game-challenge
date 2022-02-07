@@ -10,4 +10,4 @@ BEM naming conventions were adopted in the html file structures and were refered
 
  # Image 
 
- images\Capture.PNG
+![Capture](https://user-images.githubusercontent.com/97259224/152717936-ed46d485-f293-452d-8fde-0aad4cbec6e1.PNG)
