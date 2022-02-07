@@ -8,8 +8,7 @@ const game = {
   gameOverText4: document.querySelector(".game__region--40"),
   gameOverText5: document.querySelector(".game__region--57"),
   gameOverText6: document.querySelector(".game__region--66"),
-  gameEndScore: document.querySelector(".game__region--49")
-  
+  gameEndScore: document.querySelector(".game__region--49"),
 };
 
 const moveApple = () => {
@@ -35,16 +34,16 @@ const appleDrop = setInterval(moveApple, 80);
 const stopFunction = () => {
   if (new Date().getTime() - game.duration > 3000) {
     clearInterval(appleDrop);
-  game.gameOverText1.innerHTML = "Game";
-  game.gameOverText2.innerHTML = "Over";
-  game.gameOverText3.innerHTML = "Your";
-  game.gameOverText4.innerHTML = "Score";
-  game.gameOverText5.innerHTML = "Replay!";
-  game.gameOverText6.innerHTML = "Press(F5)";
-  game.gameOverText1.style.background = "red";
-  game.gameOverText2.style.background = "red";
-  game.gameEndScore.innerHTML = gameScore.score; 
-  } 
+    game.gameOverText1.innerHTML = "Game";
+    game.gameOverText2.innerHTML = "Over";
+    game.gameOverText3.innerHTML = "Your";
+    game.gameOverText4.innerHTML = "Score";
+    game.gameOverText5.innerHTML = "Replay!";
+    game.gameOverText6.innerHTML = "Press(F5)";
+    game.gameOverText1.style.background = "red";
+    game.gameOverText2.style.background = "red";
+    game.gameEndScore.innerHTML = gameScore.score;
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,4 +97,4 @@ const isAppleandBasket = () => {
   }
   gameScore.displayScore.innerHTML = `Score ${gameScore.score}`;
 };
-///////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
