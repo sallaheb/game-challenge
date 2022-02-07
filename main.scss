@@ -1,3 +1,19 @@
+$score-font-color: white;
+$score-font-size: 12px;
+$score-font-weight:bold;
+$score-background-color:red;
+
+@mixin  d-flex-direction-column {
+  display: flex;
+  flex-direction: column; 
+}
+
+@mixin d-flex-justifycont-align-center {
+  display: flex;
+  justify-content:center;
+  align-items: center;  
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -11,15 +27,12 @@ body {
   margin-top: 30px;
   align-items: center;
   background-color: black;
-
-
 }
 
 .instructions {
   font-size: 11px;
   color: white;
   text-align: center;
-
 }
 
 .game {
@@ -49,7 +62,7 @@ body {
     color: white;
     font-weight: bold;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items: center;
   }
 
@@ -75,8 +88,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-
-
 }
 
 
