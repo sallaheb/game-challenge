@@ -10,4 +10,4 @@ BEM naming conventions were adopted in the html file structures and were refered
 
  # Image 
 
- 
+ images\Capture.PNG
