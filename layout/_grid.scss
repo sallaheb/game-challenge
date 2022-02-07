@@ -18,42 +18,34 @@
   }
 
   &__region--8 {
-    font-size: 12px;
-    color: white;
-    font-weight: bold;
+    font-size: $score-font-size;
+    color:$score-font-color;
+    font-weight: $score-font-weight;
     text-align: center;
     background-color: red;
   }
   &__region--30 {
-    font-size: 12px; 
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    font-size: $score-font-size;
+    color:$score-font-color;
+    font-weight: $score-font-weight;
+    @include d-flex-justifycont-align-center;
   }
 
   &__region--31 {
-    font-size: 12px;
-    color: white;
+    font-size: $score-font-size;
+    color:$score-font-color;
     font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include d-flex-justifycont-align-center;
   }
 
   &__region--39 {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: $score-font-size;
+    @include d-flex-justifycont-align-center;
   }
 
   &__region--40 {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: $score-font-size;
+    @include d-flex-justifycont-align-center;
   }
 }
 
