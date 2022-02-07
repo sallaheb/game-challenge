@@ -1,5 +1,5 @@
-@import '../abstracts/mixins';
-@import '../abstracts/variables';
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .game {
   display: flex;
@@ -9,7 +9,6 @@
   width: 262px;
   background-image: url(./images/illustration-gfd18a8f4c_640.jpg);
   background-size: cover;
-  
 
   &__region {
     width: 29px;
@@ -18,21 +17,21 @@
 
   &__region--8 {
     font-size: $score-font-size;
-    color:$score-font-color;
+    color: $score-font-color;
     font-weight: $score-font-weight;
     text-align: center;
-    background-color:$score-background-color;
+    background-color: $score-background-color;
   }
   &__region--30 {
     font-size: $score-font-size;
-    color:$score-font-color;
+    color: $score-font-color;
     font-weight: $score-font-weight;
     @include d-flex-justifycont-align-center;
   }
 
   &__region--31 {
     font-size: $score-font-size;
-    color:$score-font-color;
+    color: $score-font-color;
     font-weight: bold;
     @include d-flex-justifycont-align-center;
   }
@@ -48,20 +47,17 @@
   }
 }
 
-
 .apple {
-  background-image: url('./images/apple.png');
+  background-image: url("./images/apple.png");
   background-size: contain;
 }
 
 .basket {
-  background-image: url('./images/picnic-basket.png');
+  background-image: url("./images/picnic-basket.png");
   background-size: contain;
-
 }
 
 .restart {
-  background-image: url('./images/Clicktorestart.png');
+  background-image: url("./images/Clicktorestart.png");
   background-size: contain;
-
 }
