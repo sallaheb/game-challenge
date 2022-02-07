@@ -1,24 +1,6 @@
+@import '../abstracts/mixins';
 
-* {
-margin: 0;
-padding: 0;
-}
-
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 30px;
-  align-items: center;
-  background-color: black;
-}
-
-.instructions {
-  font-size: 11px;
-  color: white;
-  text-align: center;
-}
+@import '../abstracts/variables';
 
 .game {
   display: flex;
@@ -92,12 +74,3 @@ body {
   background-size: contain;
 
 }
-
-footer {
-  display: flex;
-  font-size: 5px;
-
-   div {
-  margin:40px
-   }
- }
