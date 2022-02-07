@@ -10,12 +10,15 @@ body {
   justify-content: center;
   margin-top: 30px;
   align-items: center;
+  background-color: black;
 
 
 }
 
 .instructions {
   font-size: 11px;
+  color: white;
+  text-align: center;
 
 }
 
@@ -25,7 +28,9 @@ body {
   border: 1px black solid;
   height: 300px;
   width: 262px;
-  background-color: grey;
+  background-image: url(./images/illustration-gfd18a8f4c_640.jpg);
+  background-size: cover;
+  
 
   &__region {
     width: 29px;
@@ -33,10 +38,48 @@ body {
   }
 
   &__region--8 {
-    font-size: 10px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: red;
+  }
+  &__region--30 {
+    font-size: 12px; 
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
   }
 
+  &__region--31 {
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__region--39 {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__region--40 {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
 }
+
+
 .apple {
   background-image: url('./images/apple.png');
   background-size: contain;
@@ -48,10 +91,17 @@ body {
 
 }
 
+.restart {
+  background-image: url('./images/Clicktorestart.png');
+  background-size: contain;
+
+}
+
 footer {
   display: flex;
   font-size: 5px;
-  div {
+
+   div {
   margin:40px
-  }
-}
+   }
+ }

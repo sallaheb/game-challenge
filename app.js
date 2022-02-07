@@ -2,6 +2,14 @@
 const game = {
   total: 0,
   duration: (gameStartTime = new Date().getTime()),
+  gameOverText1: document.querySelector(".game__region--30"),
+  gameOverText2: document.querySelector(".game__region--31"),
+  gameOverText3: document.querySelector(".game__region--39"),
+  gameOverText4: document.querySelector(".game__region--40"),
+  gameOverText5: document.querySelector(".game__region--57"),
+  gameOverText6: document.querySelector(".game__region--66"),
+  gameEndScore: document.querySelector(".game__region--49")
+  
 };
 
 const moveApple = () => {
@@ -25,9 +33,18 @@ const moveApple = () => {
 const appleDrop = setInterval(moveApple, 80);
 
 const stopFunction = () => {
-  if (new Date().getTime() - game.duration > 30000) {
+  if (new Date().getTime() - game.duration > 3000) {
     clearInterval(appleDrop);
-  }
+  game.gameOverText1.innerHTML = "Game";
+  game.gameOverText2.innerHTML = "Over";
+  game.gameOverText3.innerHTML = "Your";
+  game.gameOverText4.innerHTML = "Score";
+  game.gameOverText5.innerHTML = "Replay!";
+  game.gameOverText6.innerHTML = "Press(F5)";
+  game.gameOverText1.style.background = "red";
+  game.gameOverText2.style.background = "red";
+  game.gameEndScore.innerHTML = gameScore.score; 
+  } 
 };
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -66,18 +83,19 @@ const move = (e) => {
 
 document.addEventListener("keydown", move);
 
-/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 const gameScore = {
   score: 0,
   displayScore: document.querySelector(".game__region--8"),
 };
 
+game.score;
 const isAppleandBasket = () => {
   let position = document.querySelector(".basket");
   if (position.classList.length >= 5) {
     gameScore.score += 1;
   }
-  gameScore.displayScore.innerHTML = `Score: ${gameScore.score}`;
+  gameScore.displayScore.innerHTML = `Score ${gameScore.score}`;
 };
 ///////////////////////////////////////////////////////////////////////////////////
