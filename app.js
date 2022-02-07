@@ -32,7 +32,7 @@ const moveApple = () => {
 const appleDrop = setInterval(moveApple, 80);
 
 const stopFunction = () => {
-  if (new Date().getTime() - game.duration > 3000) {
+  if (new Date().getTime() - game.duration > 20000) {
     clearInterval(appleDrop);
     game.gameOverText1.innerHTML = "Game";
     game.gameOverText2.innerHTML = "Over";
