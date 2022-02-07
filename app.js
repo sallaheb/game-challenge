@@ -86,10 +86,10 @@ document.addEventListener("keydown", move);
 
 const gameScore = {
   score: 0,
-  displayScore: document.querySelector(".game__region--8"),
+  displayScore: document.querySelector(".game__region--8")
 };
 
-game.score;
+
 const isAppleandBasket = () => {
   let position = document.querySelector(".basket");
   if (position.classList.length >= 5) {
